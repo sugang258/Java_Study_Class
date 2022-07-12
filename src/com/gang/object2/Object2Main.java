@@ -12,7 +12,7 @@ public class Object2Main {
 		//멤버변수 사용
 		//참조변수명.변수명
 		mt1.test();
-		////.//
+		//ㅇㅇ
 		Method2 mt2 = new Method2();
 		mt2.info();
 		
