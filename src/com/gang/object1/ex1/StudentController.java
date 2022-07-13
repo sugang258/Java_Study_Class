@@ -8,7 +8,16 @@ public class StudentController {
 	
 	public void start() {
 		
+		
 		Scanner sc = new Scanner(System.in);
+		
+		StudentView view = new StudentView();
+		StudentService service = new StudentService();
+		Student [] students = null;
+		
+		boolean check = true;
+		
+		while(check) {
 		System.out.println("1. 학생 정보 입력");
 		System.out.println("2. 학생 정보 조회");
 		System.out.println("3. 학생 정보 검색");
@@ -20,19 +29,24 @@ public class StudentController {
 	
 		if(choice == 1) {
 			System.out.println("학생 정보 입력을 선택하셨습니다.");
+			students = service.makestudent();
 		}else if(choice == 2) {
 			System.out.println("학생 정보 조회를 선택하셨습니다.");
+			view.ViewAll(students);
 		}else if(choice == 3) {
 			System.out.println("학생 정보 검색을 선택하셨습니다.");
+			service.findStudent(students);
 		}else if(choice == 4) {
 			System.out.println("학생 정보 삭제를 선택하셨습니다.");
 		}else if (choice == 5) {
 			System.out.println("학생 정보 추가를 선택하셨습니다");
 		}else {
 			System.out.println("프로그램 종료");
+			check =! check;
 		}
 
 		
+	}
 	}
 
 }
