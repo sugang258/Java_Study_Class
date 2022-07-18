@@ -38,8 +38,10 @@ public class StudentController {
 			service.findStudent(students);
 		}else if(choice == 4) {
 			System.out.println("학생 정보 삭제를 선택하셨습니다.");
+			//정보 삭제 서비스
 		}else if (choice == 5) {
 			System.out.println("학생 정보 추가를 선택하셨습니다");
+			//정보 추가 서비스
 		}else {
 			System.out.println("프로그램 종료");
 			check =! check;

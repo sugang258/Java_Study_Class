@@ -12,7 +12,10 @@ public class StudentView {
 	Scanner sc = new Scanner(System.in);
 	Student student = new Student();
 	
-	public void viewMessage() {
+	public void viewMessage(String message) {
+		System.out.println(message);
+	}
+	public void ViewNo() {
 		System.out.println("학생의 번호가 존재하지 않습니다.");
 	}
 	public void ViewOne(Student student) {
